@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'fk',
     'fkip',
     'ft',
-    'pascasarjana',  
+    'pascasarjana',
+    'profil',  
 ]
 
 MIDDLEWARE = [
