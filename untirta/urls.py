@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from data.views import data
 from faperta.views import faperta
 from feb.views import feb
 from fh.views import fh
@@ -24,9 +25,11 @@ from fkip.views import fkip
 from ft.views import ft
 from pascasarjana.views import pascasarjana
 from profil.views import profil
+from.import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('data/', data),
     path('faperta/', faperta),
     path('feb/', feb),
     path('fh/', fh),
@@ -36,4 +39,5 @@ urlpatterns = [
     path('ft/', ft),
     path('pascasarjana/', pascasarjana),
     path('profil/', profil),
+    path('home/', views.untirta)
 ]
