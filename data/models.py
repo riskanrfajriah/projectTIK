@@ -4,6 +4,7 @@ from django.db import models
 class dosen(models.Model):
     nama = models.CharField(max_length=50)
     NIP = models.CharField(max_length=40)
+    foto = models.CharField(max_length=40)
     tanggal_lahir = models.CharField(max_length=40)
     email = models.CharField(max_length=40)
     fakultas = models.CharField(max_length=40)
@@ -16,6 +17,7 @@ class dosen(models.Model):
 class mahasiswa(models.Model):
     nama = models.CharField(max_length=50)
     NIM = models.CharField(max_length=40)
+    foto = models.CharField(max_length=40)
     tanggal_lahir = models.CharField(max_length=40)
     email = models.CharField(max_length=40)
     fakultas = models.CharField(max_length=40)
@@ -27,6 +29,7 @@ class mahasiswa(models.Model):
 class staff(models.Model):
     nama = models.CharField(max_length=50)
     NIP = models.CharField(max_length=40)
+    foto = models.CharField(max_length=40)
     tanggal_lahir = models.CharField(max_length=40)
     email = models.CharField(max_length=40)
     unit = models.CharField(max_length=40)
