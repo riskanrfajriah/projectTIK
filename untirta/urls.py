@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from data.views import data
-from faperta.views import faperta
+from faperta.views import *
 from feb.views import feb
 from fh.views import fh
 from fisip.views import fisip
@@ -25,12 +25,37 @@ from fkip.views import fkip
 from ft.views import ft
 from pascasarjana.views import pascasarjana
 from profil.views import profil
+from faperta.models import dosen
+from faperta.models import mahasiswa
+from faperta.models import staff
 from.import views
+
+class dosenadmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(dosen, dosenadmin)
+
+class mahasiswaadmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(mahasiswa, mahasiswaadmin)
+
+class staffadmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(staff, staffadmin)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('data/', data),
     path('faperta/', faperta),
+    path('dosen/', dosenfaperta),
+    path('mahasiswa/', mahasiswafaperta),
+    path('staff/', stafffaperta),
+    path('tambah-dosen/', tambah_dosen),
+    path('tambah-mahasiswa/', tambah_mahasiswa),
+    path('tambah-staff/', tambah_staff),
+    path('dosen/ubah/<int:id_dosen>', ubah_dosen, name='ubah_dosen'),
     path('feb/', feb),
     path('fh/', fh),
     path('fisip/', fisip),

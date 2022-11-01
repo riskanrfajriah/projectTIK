@@ -1,0 +1,31 @@
+{% block content %}
+
+    <h2><center>Data staff</center></h2>
+
+        <table border="1" cellpadding="10" width="100%">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>NIP</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Email</th>
+                    <th>Unit</th>
+                    <th>Alamat</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for staff in staffs %}
+                <tr>
+                    <td>{{ staff.nama }}</td>
+                    <td>{{ staff.NIP }}</td>
+                    <td>{{ staff.tanggal_lahir }}</td>
+                    <td>{{ staff.email }}</td>
+                    <td>{{ staff.unit }}</td>
+                    <td>{{ staff.alamat }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+{% endblock %}

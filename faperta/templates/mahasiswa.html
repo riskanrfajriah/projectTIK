@@ -1,0 +1,31 @@
+{% block content %}
+
+    <h2><center>Data Mahasiswa</center></h2>
+
+        <table border="1" cellpadding="10" width="100%">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>NIM</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Email</th>
+                    <th>Fakultas</th>
+                    <th>Prodi</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for mahasiswa in mahasiswas %}
+                <tr>
+                    <td>{{ mahasiswa.nama }}</td>
+                    <td>{{ mahasiswa.NIP }}</td>
+                    <td>{{ mahasiswa.tanggal_lahir }}</td>
+                    <td>{{ mahasiswa.email }}</td>
+                    <td>{{ mahasiswa.fakultas }}</td>
+                    <td>{{ mahasiswa.prodi }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+{% endblock %}

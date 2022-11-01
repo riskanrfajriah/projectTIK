@@ -1,0 +1,33 @@
+{% block content %}
+
+    <h2><center>Data Dosen</center></h2>
+
+        <table border="1" cellpadding="10" width="100%">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>NIP</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Email</th>
+                    <th>Fakultas</th>
+                    <th>Prodi</th>
+                    <th>Alamat</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for dosen in dosens %}
+                <tr>
+                    <td><a href="{% url 'ubah_dosen' dosen.id %}">{{ dosen.nama }}</a></td>
+                    <td>{{ dosen.NIP }}</td>
+                    <td>{{ dosen.tanggal_lahir }}</td>
+                    <td>{{ dosen.email }}</td>
+                    <td>{{ dosen.fakultas }}</td>
+                    <td>{{ dosen.prodi }}</td>
+                    <td>{{ dosen.alamat }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+{% endblock %}

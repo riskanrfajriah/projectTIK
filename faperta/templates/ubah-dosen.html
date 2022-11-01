@@ -1,0 +1,13 @@
+{% block content %}
+
+<h3>Ubah: {{ dosen.nama }}</h3>
+<form action="{% url 'ubah_dosen' dosen.id %}" method="post">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button class="btn btn-primary">Simpan</button>
+    <a href="/dosen" class="btn btn-danger"></a>
+</form>
+
+{% endblock %}
